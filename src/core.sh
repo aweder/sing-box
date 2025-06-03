@@ -690,7 +690,7 @@ uninstall() {
     [[ $is_install_sh ]] && return # reinstall
     _green "\n卸载完成!"
     msg "脚本哪里需要完善? 请反馈"
-    msg "反馈问题) $(msg_ul https://github.com/${is_sh_repo}/issues)\n"
+    msg "反馈问题) $(msg_ul https://gh-proxy.com/https://github.com/${is_sh_repo}/issues)\n"
 }
 
 # manage run status
@@ -1483,7 +1483,7 @@ update() {
     fi
     download $is_update_name $is_new_ver
     msg "更新成功, 当前 $is_show_name 版本: $(_green $is_new_ver)\n"
-    msg "$(_green 请查看更新说明: https://github.com/$is_update_repo/releases/tag/$is_new_ver)\n"
+    msg "$(_green 请查看更新说明: https://gh-proxy.com/https://github.com/$is_update_repo/releases/tag/$is_new_ver)\n"
     [[ $is_update_name != 'sh' ]] && manage restart $is_update_name &
 }
 
